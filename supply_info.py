@@ -38,8 +38,8 @@ def kingfisher_plates_to_biohaz_box(lp_container):
     biohaz_cost = biohaz_box_amount * etoh_waste_supplies['33_gal_biohazard_box_full_$']
     etoh_cost = etoh_waste_supplies['etoh_in_18_gal_container_cost_$'] * lp_container
     cost_saving = lp_cost - (biohaz_cost + etoh_cost)
-    cost_reduction_percent = 100 - ((biohaz_cost / lp_cost) * 100)
     proposed_cost = biohaz_cost + etoh_cost
+    cost_reduction_percent = 100 - ((proposed_cost / lp_cost) * 100)
     etoh_amount = lp_container * 2
     return f'Current Loose Pack EtOH cost: ${lp_cost} \nNew Process Cost: ${proposed_cost} \nBiohazard box amount: {biohaz_box_amount} \nBiohazard box cost: ${biohaz_cost} \nEtOH Volume: {etoh_amount}L \nEtOH Cost (shipped under EtOH Solution Waste Stream): ${etoh_cost} \nCost savings: ${cost_saving} \nCost Reduction: {cost_reduction_percent}%'
 
