@@ -17,7 +17,9 @@ etoh_waste_supplies = {'18_gal_container_empty_$': 44.230,
                        'weight_attributed_to_trays_in_18_gal_container': 0,
                        'biowaste_box_max_waste_lbs': 50,
                        'avg_full_biohaz_box_lbs': 19,
-                       'avg_full_18-gal-container_lbs': 18
+                       'avg_full_18-gal-container_lbs': 18,
+                       'yearly_etoh_lbs': 9968,
+                       'average_full_18-gal-container_shipped_per_year': 554
                        }
 
 
@@ -26,6 +28,7 @@ def weight_break_down_18_gal_container():
     is used to map cost to a new management practice."""
     weight_of_trays = etoh_waste_supplies['avg_full_18-gal-container_lbs'] - (etoh_waste_supplies['weight_of_empty_18_gal_container_lbs'] + etoh_waste_supplies['weight_of_etoh_in_empty_18_gal_container_lbs'])
     return f'Weight of trays: {weight_of_trays} lbs'
+
 
 def kingfisher_plates_to_biohaz_box(lp_container):
     """Function used to convert volume of waste generated from LP containers to biohaz boxes, will also calculate the associated
@@ -40,7 +43,10 @@ def kingfisher_plates_to_biohaz_box(lp_container):
     etoh_amount = lp_container * 2
     return f'Current Loose Pack EtOH cost: ${lp_cost} \nNew Process Cost: ${proposed_cost} \nBiohazard box amount: {biohaz_box_amount} \nBiohazard box cost: ${biohaz_cost} \nEtOH Volume: {etoh_amount}L \nEtOH Cost (shipped under EtOH Solution Waste Stream): ${etoh_cost} \nCost savings: ${cost_saving} \nCost Reduction: {cost_reduction_percent}%'
 
+
 print(weight_break_down_18_gal_container())
+print('LP EtOH Containers shipped in 2022: 554')
+print('1 LP Container ($433.23) ~ 0.5 Biohaz Box($15) + 2L liquid EtOH ($11)')
 print()
 print('Cost Break Down:')
-print(kingfisher_plates_to_biohaz_box(lp_container=500))
+print(kingfisher_plates_to_biohaz_box(lp_container=554))
