@@ -3,19 +3,18 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-from supply_info import etoh_waste_supplies, kingfisher_plates_to_biohaz_box
 
 
-data = {'Current Yearly Spend ($)': [240009],
-        'Proposed Yearly Spend ($)': [14404]}
+data = {'Current Yearly Spend ($)': [190538],
+        'Proposed Yearly Spend ($)': [11544]}
 
 index = ['Cost reduced by 9%']
 
-spend_dataframe = pd.DataFrame({'Cost Saving = $225,605 (94% Reduction)': ['Current', 'Proposed'],
-                                'Spend': [240009, 14404]},)
+spend_dataframe = pd.DataFrame({'Cost Saving = $178,994 (94% Reduction)': ['Current', 'Proposed'],
+                                'Spend': [190538, 11544]},)
 
 
-model = spend_dataframe.plot.bar(rot=0, title= 'Yearly LP EtOH Spend ($)', x='Cost Saving = $225,605 (94% Reduction)', y='Spend')
+model = spend_dataframe.plot.bar(rot=0, title= 'Yearly LP EtOH Spend ($)', x='Cost Saving = $178,994 (94% Reduction)', y='Spend')
 
 # auto labels column with value from dataframe
 model.bar_label(model.containers[0])

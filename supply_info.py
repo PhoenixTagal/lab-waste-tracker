@@ -3,8 +3,8 @@
 
 
 etoh_waste_supplies = {'18_gal_container_empty_$': 44.230,
-                       '18_gal_container_full_$': 389,
-                       '18_gal_total_$': 433.23,
+                       '18_gal_container_full_$': 384.91,
+                       '18_gal_total_$': 429.14,
                        '5_gal_carboy_empty_$': 18,
                        '5_gal_carboy_full_$': 92.970,
                        '5_gal_carboy_total_$': 110.97,
@@ -45,8 +45,8 @@ def kingfisher_plates_to_biohaz_box(lp_container):
 
 
 print(weight_break_down_18_gal_container())
-print('LP EtOH Containers shipped in 2022: 554')
-print('1 LP Container ($433.23) ~ 0.5 Biohaz Box($15) + 2L liquid EtOH ($11)')
+print('LP EtOH Containers shipped in 2022: 444')
+print(f'1 LP Container ($429.214) ~ 0.5 Biohaz Box($15) + 2L liquid EtOH ($11)')
 print()
 print('Cost Break Down:')
-print(kingfisher_plates_to_biohaz_box(lp_container=554))
+print(kingfisher_plates_to_biohaz_box(lp_container=444))
