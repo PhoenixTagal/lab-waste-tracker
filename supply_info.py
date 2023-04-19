@@ -19,7 +19,7 @@ etoh_waste_supplies = {'18_gal_container_empty_$': 44.230,
                        'avg_full_biohaz_box_lbs': 19,
                        'avg_full_18-gal-container_lbs': 18,
                        'yearly_etoh_lbs': 9968,
-                       'average_full_18-gal-container_shipped_per_year': 554
+                       'average_full_18-gal-container_shipped_per_year': 444 #this number is from looking totaling qtys from manifest, not calculation of an average
                        }
 
 
