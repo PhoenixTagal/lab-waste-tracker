@@ -16,6 +16,6 @@ spend_dataframe = pd.DataFrame({'Cost Saving = $178,994 (94% Reduction)': ['Curr
 model = spend_dataframe.plot.bar(rot=0, title= 'Yearly Loose Pack Ethanol Waste Stream Spend ($)', x='Cost Saving = $178,994 (94% Reduction)', y='Spend')
 
 # auto labels column with value from dataframe
-model.bar_label(model.containers[0], fmt='{:,.0f}')
+model.bar_label(model.containers[0], fmt='${:,.0f}')
 
 plt.show()
