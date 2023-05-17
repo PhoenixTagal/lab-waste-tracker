@@ -31,7 +31,7 @@ def cost_per_run():
     return round(run_cost)
 
 
-print(f'Total cost of sequencing drop (supply cost + disposal cost): ${sequencing_life_cycle_cost()}')
-print(f'Runs per sequencing waste drum: {runs_per_sequencing_drum()}')
-print(f'Disposal cost per run: ${cost_per_run()}')
+print(f'Total cost of sequencing drum (supply cost + disposal cost): ${sequencing_life_cycle_cost()}')
+print(f'Nova Seq runs per sequencing waste drum: {runs_per_sequencing_drum()}')
+print(f'Disposal cost of Nova Seq run: ${cost_per_run()}')
 
