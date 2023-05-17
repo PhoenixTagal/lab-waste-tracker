@@ -3,7 +3,7 @@ One kit is used per run, regardless of cycle count for kit."""
 
 sequencing_waste_supplies = {'15_gal_poly_empty_$': 66,
                              '15_gal_poly_disposal_$': 348.18,
-                             'seq_waste_volume_per_run_ml': 1480.45,  #avg from 150 and 300 cycle kit waste volume
+                             'seq_waste_volume_per_run_ml': 1480.45,  #avg taken from 150 and 300 cycle kit waste volumes provided by Barb Z
                              'sequencing_drum_volume_in_ml': 56781.2,
                             }
 
