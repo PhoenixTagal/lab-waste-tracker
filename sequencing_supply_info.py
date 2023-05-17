@@ -1,5 +1,7 @@
 """Following information is map cost for the sequencing waste stream at Adaptive.
-One kit is used per run, regardless of cycle count for kit."""
+One kit is used per run, regardless of cycle count for kit.
+This is for waste generated from NexSeq (current state).
+Adaptive will potentially transition to NovaSeq"""
 
 sequencing_waste_supplies = {'15_gal_poly_empty_$': 66,
                              '15_gal_poly_disposal_$': 348.18,
@@ -31,5 +33,5 @@ def cost_per_run():
 
 print(f'Total cost of sequencing drop (supply cost + disposal cost): ${sequencing_life_cycle_cost()}')
 print(f'Runs per sequencing waste drum: {runs_per_sequencing_drum()}')
-print(f'Cost per run: ${cost_per_run()}')
+print(f'Disposal cost per run: ${cost_per_run()}')
 
