@@ -8,6 +8,9 @@ sequencing_waste_supplies = {'15_gal_poly_empty_$': 66,
                              'next_seq_waste_volume_per_run_ml': 1480.45,  #avg taken from 150 and 300 cycle kit waste volumes provided by Barb Z
                              'nova_seq_waste_volume_per_run_ml': 18800, #from s4 300 cycle dual side
                              'sequencing_drum_volume_in_ml': 56781.2,
+                             'samples_analyzed_per_year': 0,
+                             'samples_analyzed_per_nextseq_run': 0,
+                             'samples_analyzied_per_novaseq_run'
                             }
 
 
