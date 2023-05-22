@@ -10,7 +10,7 @@ sequencing_waste_supplies = {'15_gal_poly_empty_$': 66,
                              'sequencing_drum_volume_in_ml': 56781.2,
                              'samples_analyzed_per_year': 0,
                              'samples_analyzed_per_nextseq_run': 0,
-                             'samples_analyzied_per_novaseq_run'
+                             'samples_analyzed_per_novaseq_run': 0
                             }
 
 
