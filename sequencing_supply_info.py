@@ -9,8 +9,8 @@ sequencing_waste_supplies = {'15_gal_poly_empty_$': 66,
                              'nova_seq_waste_volume_per_run_ml': 18800, #from s4 300 cycle dual side
                              'sequencing_drum_volume_in_ml': 56781.2,
                              'samples_analyzed_per_year': 0,
-                             'samples_analyzed_per_nextseq_run': 0,
-                             'samples_analyzed_per_novaseq_run': 0
+                             'samples_analyzed_per_nextseq_run': 0, #8-96 samples per run,  Runs performed in Dx Mode are processes regulated by US and EU regulatory bodies
+                             'samples_analyzed_per_novaseq_run': 0 #can be samples per run or reads per run?
                             }
 
 
