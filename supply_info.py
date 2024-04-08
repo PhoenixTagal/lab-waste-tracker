@@ -43,6 +43,18 @@ def kingfisher_plates_to_biohaz_box(lp_container):
     etoh_amount = lp_container * 2
     return f'Current Loose Pack EtOH cost: ${lp_cost} \nNew Process Cost: ${proposed_cost} \nBiohazard box amount: {biohaz_box_amount} \nBiohazard box cost: ${biohaz_cost} \nEtOH Volume: {etoh_amount}L \nEtOH Cost (shipped under EtOH Solution Waste Stream): ${etoh_cost} \nCost savings: ${cost_saving} \nCost Reduction: {cost_reduction_percent}%'
 
+def cost_saving(etoh_carboy):
+    """Calculate cost saving by inputting number of etoh carboys generated for a given time period."""
+    liters_liquid_etoh = etoh_carboy * 20
+    equivalent_in_loose_pack_containers = liters_liquid_etoh * 0.5
+    equivalent_biowaste = equivalent_in_loose_pack_containers * 0.5
+    biowaste_cost = equivalent_biowaste * 0.5
+    etoh_cost = liters_liquid_etoh * 11
+    equivalent_loose_pack_cost = equivalent_in_loose_pack_containers * 429.14
+    total_savings = equivalent_loose_pack_cost - (biowaste_cost + etoh_cost)
+    return total_savings
+
+
 
 print(weight_break_down_18_gal_container())
 print('LP EtOH Containers shipped in 2022: 444')
@@ -50,3 +62,5 @@ print(f'1 LP Container ($429.214) ~ 0.5 Biohaz Box($15) + 2L liquid EtOH ($11)')
 print()
 print('Cost Break Down:')
 print(kingfisher_plates_to_biohaz_box(lp_container=444))
+print()
+print(cost_saving(8.8))
