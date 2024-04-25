@@ -54,8 +54,6 @@ def cost_saving(etoh_carboy):
     total_savings = equivalent_loose_pack_cost - (biowaste_cost + etoh_cost)
     return total_savings
 
-
-
 print(weight_break_down_18_gal_container())
 print('LP EtOH Containers shipped in 2022: 444')
 print(f'1 LP Container ($429.214) ~ 0.5 Biohaz Box($15) + 2L liquid EtOH ($11)')
