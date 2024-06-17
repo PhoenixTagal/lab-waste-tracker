@@ -44,11 +44,13 @@ def kingfisher_plates_to_biohaz_box(lp_container):
     return f'Current Loose Pack EtOH cost: ${lp_cost} \nNew Process Cost: ${proposed_cost} \nBiohazard box amount: {biohaz_box_amount} \nBiohazard box cost: ${biohaz_cost} \nEtOH Volume: {etoh_amount}L \nEtOH Cost (shipped under EtOH Solution Waste Stream): ${etoh_cost} \nCost savings: ${cost_saving} \nCost Reduction: {cost_reduction_percent}%'
 
 def cost_saving(etoh_carboy):
-    """Calculate cost saving by inputting number of etoh carboys generated for a given time period."""
-    liters_liquid_etoh = etoh_carboy * 20
-    equivalent_in_loose_pack_containers = liters_liquid_etoh * 0.5
-    equivalent_biowaste = equivalent_in_loose_pack_containers * 0.5
-    biowaste_cost = equivalent_biowaste * 0.5
+    """Calculate cost saving by inputting total number of etoh carboys generated for a given time period.
+    80% of tatal etoh is attribtued to MLO, 20% of total eoth is attributed to R&D"""
+    mlo_etoh_carboys = etoh_carboy * 0.8 #conversion to obtain Etoh volume attributed to MLO labs
+    liters_liquid_etoh = mlo_etoh_carboys * 20 #liters per 5 gal carboy
+    equivalent_in_loose_pack_containers = liters_liquid_etoh * 0.5 # 1LP container : 2L EtOH
+    equivalent_biowaste = equivalent_in_loose_pack_containers * 0.5 # 1LP Container : 0.5 Biohazard Box
+    biowaste_cost = equivalent_biowaste * 15
     etoh_cost = liters_liquid_etoh * 11
     equivalent_loose_pack_cost = equivalent_in_loose_pack_containers * 429.14
     total_savings = equivalent_loose_pack_cost - (biowaste_cost + etoh_cost)
@@ -61,4 +63,4 @@ print()
 print('Cost Break Down:')
 print(kingfisher_plates_to_biohaz_box(lp_container=444))
 print()
-print(cost_saving(8.8))
+print(f'LP EtOH cost savings: {cost_saving()}')
